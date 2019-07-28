@@ -68,8 +68,17 @@ Output =>
 ]
 */
 
-function longerAndYounger() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+
+var arrOfObj1 = [
+  { name: "alex" ,age:22},
+  { name: "mercer",age:26},
+  { name: "alice" ,age:33},
+  { name: "zaheer",age:35},
+  { name: "elizabeth",age:45}
+]
+function longerAndYounger(arr, num1, num2) {
+  // WRITE YOUR CODE UNDER THIS LINE    
+  return arr.filter(elem => elem.name.length > num1 && elem.age < num2)
 }
 
 /* Q3:
@@ -99,8 +108,20 @@ Output =>
 "alice, fried chiken, pizaa, burger, hot dog, eggs"
   
 */
-function nameAndAllFoods() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+
+var arrOfObj2 = [
+  { name: "alex", food: "fried chiken" },
+  { name: "mercer", food: "pizaa" },
+  { name: "alice", food: "burger" },
+  { name: "zaheer", food: "hot dog" },
+  { name: "elizabeth", food: "eggs" }
+]
+
+function nameAndAllFoods(arr, index) {
+  // WRITE YOUR CODE UNDER THIS LINE 
+  return arr.reduce((acc, elem) => { 
+    return acc + ', ' + elem.food
+  }, arr[index].name  )       
 }
 
 
