@@ -23,9 +23,19 @@ Output =>
 
 */
 
-function MultiByNum1OrNum2() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+var arrOfNum1 = [1, 5, 2]
+var arrOfNum2 = [7, 2, 50]
+
+function MultiByNum1OrNum2(arr, num1, num2) {
+  // WRITE YOUR CODE UNDER THIS LINE 
+  return arr.map(elem => {
+    if (elem % num1 === 0) {
+      return elem * num1;
+    }
+    return elem * num2;
+  });
 }
+  
 
 /* Q2:
 Using Filter
